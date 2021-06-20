@@ -1,23 +1,24 @@
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class WhyMethod {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-		//	100000000
-					// 구체적인 값, 인자, argument
-		printToTimes("a", "-");
-		//	100000000
-		printToTimes("a", "*");
-		//	100000000
-		printToTimes("a", "&");
-		printToTimes("b", "!");
-
+		System.out.println(twoTimes("a", "--"));
+		FileWriter fw = new FileWriter("out.txt");
+		fw.write(twoTimes("a", "*"));
+		fw.close();
+		// Email.send("egoing@a.com", "two times a", twoTimes("a", "&"));
+		
 	}
-									// 보편적인 단어, 일반화, 매개변수, parameter
-	public static void printToTimes(String text, String delimiter) {
-		System.out.println(delimiter);
-		System.out.println(text);
-		System.out.println(text);
+	
+	public static String twoTimes(String text, String delimiter) {
+		String out = "";
+		out = out + delimiter + "\n";
+		out = out + text + "\n";
+		out = out + text + "\n";
+		return out;
 	}
 
 }
