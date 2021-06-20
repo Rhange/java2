@@ -1,6 +1,6 @@
 
 public class AccountingApp {
-
+	// Global variables (전역 변수)
 	// 공급가액
 	public static double valueOfSupply = 10000.0;
 	
