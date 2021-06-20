@@ -4,18 +4,20 @@ public class WhyMethod {
 	public static void main(String[] args) {
 		
 		//	100000000
-		printToTimesA();
+					// 구체적인 값, 인자, argument
+		printToTimes("a", "-");
 		//	100000000
-		printToTimesA();
+		printToTimes("a", "*");
 		//	100000000
-		printToTimesA();
+		printToTimes("a", "&");
+		printToTimes("b", "!");
 
 	}
-
-	public static void printToTimesA() {
-		System.out.println("-");
-		System.out.println("A");
-		System.out.println("A");
+									// 보편적인 단어, 일반화, 매개변수, parameter
+	public static void printToTimes(String text, String delimiter) {
+		System.out.println(delimiter);
+		System.out.println(text);
+		System.out.println(text);
 	}
 
 }
