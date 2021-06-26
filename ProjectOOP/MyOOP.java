@@ -5,16 +5,15 @@ public class MyOOP {
 		// [type] [variable] = new [class]();
 		
 		// p1 is Instance
-		Print p1 = new Print();
-		p1.delimiter = "----";
+		Print p1 = new Print("----");
+		// 사람들은 구분자(delimiter) 설정을 까먹을 수 있다.
 		p1.A();
 		p1.A();
 		p1.B();
 		p1.B();
 		
 		// p2 is Instance
-		Print p2 = new Print();
-		p2.delimiter = "****";
+		Print p2 = new Print("****");
 		p2.A();
 		p2.A();
 		p2.B();

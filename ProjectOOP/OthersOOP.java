@@ -14,6 +14,7 @@ public class OthersOOP {
 		// 긴 맥락의 작업에서는 클래스 자체를 사용하는 것이 아니라 복제본을 사용한다.
 		// f1 is instance
 		// FileWriter is class
+		// 파일을 지정해주어야 한다. -> FileWrite([file]);
 		FileWriter f1 = new FileWriter("data.txt");
 		f1.write("Hello");
 		f1.write(" Java");
