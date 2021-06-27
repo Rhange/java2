@@ -2,6 +2,11 @@ class Cal {
 	public int sum(int v1, int v2) {
 		return v1 + v2;
 	}
+	
+	// Overloading
+	public int sum(int v1, int v2, int v3) {
+		return v1 + v2 + v3;
+	}
 }
 
 class Cal3 extends Cal {
@@ -9,7 +14,8 @@ class Cal3 extends Cal {
 		return v1 - v2;
 	}
 	
-	// Overriding, subclass(Cal3) overrides superclass(Cal)'s 'sum' method 
+	// Overriding
+	// subclass(Cal3) overrides superclass(Cal)'s 'sum' method 
 	// by adding 'System.out.println("Cal3!!!");'
 	public int sum(int v1, int v2) {
 		System.out.println("Cal3!!!");
@@ -22,6 +28,7 @@ public class InheritanceApp {
 	public static void main(String[] args) {
 		Cal c = new Cal();
 		System.out.println(c.sum(2, 1)); // 3
+		System.out.println(c.sum(2, 1, 3)); // 6
 
 		// Dose Cal2 class have sum method?
 		Cal2 c2 = new Cal2();
