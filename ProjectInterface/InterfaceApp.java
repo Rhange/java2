@@ -21,10 +21,11 @@ class RealCal implements Calculable, Printable {
 
 public class InterfaceApp {
 	public static void main(String[] args) {
-		// 더하기 기능이 있는 클래스를 만들어주세요.
-		RealCal c = new RealCal();
+		// 객체 타입으로 'RealCal'이 아닌 interface인 'Calculable'이 올 수 있다.
+		// 그러나 이 경우에 인스턴스 'c'는 Printable interface의 기능들은 사용할 수 없다.
+		Calculable c = new RealCal();
 		System.out.println(c.sum(2, 1));
-		c.print();
+		c.print();	// compile Error
 		System.out.println("c.PI : " + c.PI);
 	}
 }
