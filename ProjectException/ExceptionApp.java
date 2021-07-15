@@ -8,14 +8,15 @@ public class ExceptionApp {
 		try {
 			System.out.println(2);
 			System.out.println(scores[3]);
-			// below codes are not going to execute 
+
+			// below codes are not going to execute
 			System.out.println(3);
 			System.out.println(2 / 0);
 			System.out.println(4);
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("없는 값을 찾고 있군요!");
 		} catch (ArithmeticException e) {
-			System.out.println("잘못된 계산입니다.");
+			System.out.println("계산이 잘못된 것 같습니다.");
+		} catch (Exception e) {
+			System.out.println("뭔가가 이상합니다. 오류가 발생했거든요");
 		}
 		System.out.println(5);
 
